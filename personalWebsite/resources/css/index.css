@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    aligh-items: center;
+    width: 100vw;
+    margin: 0;
+    font-size: 100%;
+    background-color: #e29806;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.menuOptions {
+    display: flex;
+    align-items: center;
+    padding-right: 3em;
+    float: right;
+}
+
+.menuSpace {
+    font-family: "Inter", sans-serif;
+    font-weight: 100;
+    font-size: 100%;
+    color: white;
+    padding: 1em;
+}
+
+.menuOptions a {
+    font-family: "Inter", sans-serif;
+    font-weight: 100;
+    font-size: 200%;
+    text-decoration: none;
+    color: white;
+}
+
+.menuOptions a:hover {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 200%; 
+    text-decoration: none;
+    color: #1d67f9;
+
+}
+
+.Spacer1 {
+    padding: 1em;
+}
+
+.Spacer2 {
+    margin-top: 5%;
+    height: 50%;
+}
+
+.Spacer3 {
+    margin-top: 5%;
+    height: 50%;
+    background-color: #161616;
+}
+
+.githubLogo {
+    width: auto;
+}
+
+.MSUCoElogo {
+    width: 30%;
+    padding-left: 1.2em;
+    padding-right: 1.2em;
+}
+
+.MSUCoElogo img {
+    width: 100%;
+    height: auto;
+}
+
+.githubLogo img {
+    width: 60%;
+    height: auto;
+    margin: auto;
+}
+
+@keyframes shaking {
+    from {
+        transform: rotate(0turn);
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+.githubLogo img:hover {
+    width: 60%;
+    height: auto;
+    margin: auto;
+    animation: shaking 120ms 1 linear;
+}
+
+.linkedinLogo {
+    width: auto;
+}
+
+.linkedinLogo img {
+    width: 60%;
+    height: auto;
+    margin: auto;
+}
+
+.linkedinLogo img:hover{
+    width: 60%;
+    height: auto;
+    margin: auto;
+    animation: shaking 120ms 1 linear;
+}
+
+.resumeLogo {
+    width: auto;
+}
+
+.resumeLogo img {
+    width: 60%;
+    height: auto;
+    margin: auto;
+}
+
+.resumeLogo img:hover{
+    width: 60%;
+    height: auto;
+    margin: auto;
+    animation: shaking 120ms 1 linear;
+}
+
+.rsSection1I1 img {
+    width: 90%;
+    max-width: 90%;
+    border-radius: 50%;
+}
+
+.rsSection1I1 img:hover{
+    box-shadow: 0 0 5px 10px #f0a105;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 5%;
+    background-color: #e29806;
+}
+
+.firstSection{
+    display: flex;
+    flex-direction: row; /*For mobile, change this to column and mess with spacing */
+    background-color: #e29806;
+    margin: auto;
+    width: 100%;
+}
+
+.secondSection{
+    display: flex;
+    flex-direction: column;
+    background-color: #161616;
+    margin: auto;
+    padding-bottom: 5em;
+    width: 100%;
+}
+
+.thirdSection{
+    display: flex;
+    flex-direction: column;
+    background-color: #161616;
+    padding-bottom: 3em;
+}
+
+.fourthSection{
+    display:flex;
+    align-items:center;
+    flex-direction: column;
+    background-color: #161616;
+    padding-top: 6em;
+    padding-bottom:3em;
+    text-align: center;
+}
+
+.allEHolder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.experienceHolder{
+    display: flex;
+    border-radius: 25px;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    width: 90%;
+    padding: 1.5em;
+}
+
+.experienceHolder:hover{
+     color: #0a0a0a;
+     border-style: solid;
+     box-shadow: 0 0 5px 10px #0a0a0a;
+}
+
+.experience1Title{
+    font-family: "Inter", sans-serif;
+    padding-bottom: 0.5em;
+    font-weight: 800;
+    font-size: 400%;
+    color: #034c33;
+    margin: auto;
+}
+
+.experience1Body{
+    font-family: "Inter", sans-serif;
+    font-weight: 100;
+    font-size: 200%;
+    color: white;
+    width: 95%;
+    margin: auto;
+}
+
+.experienceText{
+    display: flex;
+    width:70%;
+    flex-direction: column;
+    align-items: end;
+}
+
+.experience1Dets li{
+    margin-bottom: 1em;
+    font-size: 80%;
+}
+
+.projectRow{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+}
+
+.projectHolder{
+    display: flex;
+    flex-direction: column;
+    font-family: "Inter", sans-serif;
+    color: #e29806;
+    align-items: center;
+    text-align: center;
+    max-width: 45%;
+    padding: 1em;
+    margin: auto;
+    border-radius: 25px;
+    margin-bottom: 1em;
+    border-style: dashed;
+}
+
+.petqsLink{
+    color: white;
+    text-decoration: none;
+}
+
+.petqsDets li{
+    padding: 0.3em;
+}
+
+.petqsDets{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+
+.petqsDescr{
+    font: "Inter", sans-serif;
+    font-weight: 100;
+    font-size: 110%;
+    color: white;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.projectHolder:hover{
+    color: #1d67f9;
+    box-shadow: 0 0 5px 10px #1d67f9;
+}
+
+.petqsLogo{
+    padding: 1em;
+    width: 90%;
+    height: auto;
+    margin: auto;
+}
+
+.starxLogo{
+    width: 30%;
+    height: auto;
+}
+
+.lsSection1LH{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    padding: 0%;
+}
+
+.footerIcons{    
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.3em;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    padding: 0%;
+}
+
+.leftSideSection1{
+    display: flex;
+    flex-direction: column;
+    font-family: "Inter", sans-serif;
+    color: white;
+    width: 60%;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
+
+.lsSection1T1{
+   font-size: 4.5em;
+   font-weight: 800;
+   margin: auto;
+}
+
+.lsSection1T2{
+    font-size: 2em;
+    font-weight: 100;
+    margin: auto;
+}
+
+.rightSideSection1{
+    width: 40%;
+    margin: auto;
+    text-align: center;    
+}
+
+.emailReach{
+    display: flex;
+    flex-direction:  column;
+    font-family: "Inter", sans-serif;
+    font-weight: 200;
+    font-size: 400%;
+    color: white;
+    background-color: #e29806;
+    border-radius: 25px;
+    margin-top: 0.4em;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+}
+
+.emailAddress{
+    color: #1d67f9;
+    font-weight: 700;
+}
+
+.emailAddress a{
+    color: #1d67f9;
+    text-decoration: none;
+}
+
+.title {
+    font-family: "Inter", sans-serif;
+    font-weight: 200;
+    font-size: 3em;
+    color:white;
+    margin-left: 1%;
+}

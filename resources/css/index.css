@@ -436,7 +436,7 @@
 
     .menuOptions a:hover {
         font-family: "Inter", sans-serif;
-        font-weight: 600;
+        font-weight: 100;
         font-size: 200%; 
         text-decoration: none;
         color: #1d67f9;

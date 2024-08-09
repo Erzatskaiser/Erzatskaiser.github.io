@@ -217,6 +217,15 @@
         margin: auto;
     }
 
+    .experience2Title{
+      font-family: "Inter", sans-serif;
+      padding-bottom: 0.5em;
+      font-weight: 800;
+      font-size: 160%;
+      color: #AEFE44;
+      margin: auto;
+    }
+
     .experience1Body{
         font-family: "Inter", sans-serif;
         font-weight: 100;
@@ -537,6 +546,7 @@
     }
 
     .rsSection1I1 img:hover{
+        margin: auto;
         box-shadow: 0 0 5px 10px #f0a105;
     }
 
@@ -595,7 +605,7 @@
         flex-direction: row;
         align-items: center;
         color: white;
-        width: 95%;
+        width: 90%;
         padding: 1.5em;
     }
 
@@ -612,6 +622,16 @@
         font-size: 400%;
         color: #034c33;
         margin: auto;
+        padding-left: 2%;
+    }
+
+    .experience2Title{
+      font-family: "Inter", sans-serif;
+      padding-bottom: 0.5em;
+      font-weight: 800;
+      font-size: 400%;
+      color: #AEFE44;
+      margin: auto;
     }
 
     .experience1Body{

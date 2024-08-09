@@ -203,6 +203,7 @@
         border-width: 5px;
         border-color: #3b3b3b;
         padding: 1.5em;
+        margin-bottom: 2em;
     }
 
     .experienceHolder:hover{

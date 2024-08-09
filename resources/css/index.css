@@ -606,12 +606,16 @@
         align-items: center;
         color: white;
         width: 90%;
+        border-style: solid;
+        border-width: 5px;
+        border-color: #3b3b3b;
         padding: 1.5em;
+        margin-bottom: 2em;
     }
 
     .experienceHolder:hover{
         color: #0a0a0a;
-        border-style: solid;
+        border-style: solid 10px;
         box-shadow: 0 0 5px 10px #0a0a0a;
     }
 
@@ -637,7 +641,7 @@
     .experience1Body{
         font-family: "Inter", sans-serif;
         font-weight: 100;
-        font-size: 200%;
+        font-size: 150%;
         color: white;
         width: 95%;
         margin: auto;

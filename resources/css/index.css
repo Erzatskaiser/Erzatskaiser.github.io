@@ -239,6 +239,15 @@
       margin: auto;
     }
 
+    .experience4Title{
+      font-family: "Inter", sans-serif;
+      padding-bottom: 0.5em;
+      font-weight: 800;
+      font-size: 160%;
+      color: #197427;
+      margin: auto;
+    }
+
     .experience1Body{
         font-family: "Inter", sans-serif;
         font-weight: 100;
@@ -657,6 +666,15 @@
       font-weight: 800;
       font-size: 400%;
       color: white;
+      margin: auto;
+    }
+
+    .experience4Title{
+      font-family: "Inter", sans-serif;
+      padding-bottom: 0.5em;
+      font-weight: 800;
+      font-size: 400%;
+      color: #197427;
       margin: auto;
     }
 

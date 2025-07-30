@@ -8,211 +8,208 @@
   <title>Emmanuel Butsana</title>
 </head>
 <body>
-     <div class='navbar'>
-          <h1 class='title'>Emmanuel Butsana </h1>
-	  <div class='menuOptions'>
-             <a href='#About'>About</a>
-             <p class='menuSpace'> | </p>
-	     <a href='#Experience'>Experience</a>
-             <p class='menuSpace'> | </p>
-	     <a href='#Projects'>Projects</a>
-             <p class='menuSpace'> | </p>
-             <a href='#Contact'>Contact</a>  
+  <div class='navbar'>
+    <h1 class='title'>Emmanuel Butsana</h1>
+    <div class='menuOptions'>
+      <a href='#About'>About</a>
+      <p class='menuSpace'> | </p>
+      <a href='#Experience'>Experience</a>
+      <p class='menuSpace'> | </p>
+      <a href='#Projects'>Projects</a>
+      <p class='menuSpace'> | </p>
+      <a href='#Contact'>Contact</a>
+    </div>
+  </div>
+
+  <!--First section ("About")-->
+  <div class='firstSection' id='About'>
+    <div class='leftSideSection1'>
+      <p class='lsSection1T1'>Hello, I'm</p>
+      <p class='lsSection1T1'>Emmanuel Butsana</p>
+      <div class='Spacer1'></div>
+      <p class='lsSection1T2'>Honors Electrical and Computer Engineering</p>
+      <p class='lsSection1T2'>@ Michigan State University</p>
+      <div class='lsSection1LH'>
+        <div class='githubLogo'>
+          <a href="https://github.com/Erzatskaiser">
+            <img src="./resources/images/github.png" alt="Github">
+          </a>
+        </div>
+        <div class='linkedinLogo'>
+          <a href="https://www.linkedin.com/in/emmanuel-ze-butsana/">
+            <img src="./resources/images/linkedin.png" alt="LinkedIn">
+          </a>
+        </div>
+        <div class='resumeLogo'>
+          <a href="./resources/resume.pdf">
+            <img src="./resources/images/resume2.png" alt="Resume">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class='rightSideSection1'>
+      <div class='rsSection1I1'>
+        <img src="./resources/images/profile.jpg" alt="Image of Me">
+      </div>
+    </div>
+  </div>
+  <div class="Spacer2">&nbsp;&nbsp;</div>
+
+  <!--Second section ("Experience")-->
+  <div class='secondSection' id='Experience'>
+    <h1 class='title'>Experiences</h1>
+    <div class='allEHolder'>
+
+      <div class='experienceHolder'>
+        <div class='MSUCoElogo'>
+          <a href="https://www.egr.msu.edu/hatlab/">
+            <img src="./resources/images/hatlab.png" alt="MSU I-EML">
+          </a>
+        </div>
+        <div class="experienceText">
+          <p class='experience4Title'>Undergraduate Research Assistant</p>
+          <div class="experience1Body">
+            Since Spring 2025, I have worked as an undergraduate research assistant at MSU's Intelligent Edge Microsystems Lab (I-EML), contributing to projects at the intersection of machine learning and embedded systems for human-centered applications. My key responsibilities have included:
+            <ul class="experience1Dets">
+              <li>Deploying and benchmarking image recognition models on the NVIDIA Jetson AGX Orin, evaluating how hardware limitations impact real-time inference performance</li>
+              <li>Designing and implementing a modular image augmentation pipeline in C++ for efficient data preprocessing, supporting geometric transformations, color adjustments, and noise injection</li>
+              <li>Fine-tuning generative image models to produce high-fidelity synthetic datasets, enhancing model generalization in downstream tasks</li>
+            </ul>
           </div>
-     </div>
-    
-    <!--First section ("About")-->
-    <div class='firstSection' id='About'>
-	  <div class='leftSideSection1'>
-            <p class='lsSection1T1'> Hello, I'm </p>
-            <p class='lsSection1T1'> Emmanuel Butsana </p>
-            <div class='Spacer1'></div>
-	    <p class='lsSection1T2'> Honors Electrical and Computer Engineering </p>
-
-            <p class='lsSection1T2'> @ Michigan State University </p>
-            <div class='lsSection1LH'>
-                <div class='githubLogo'>
-		    <a href="https://github.com/Erzatskaiser">
-                        <img src="./resources/images/github.png" alt="Github">
-                    </a>
-                </div>
-
-		<div class='linkedinLogo'>
-                    <a href="https://www.linkedin.com/in/emmanuel-ze-butsana/">
-		        <img src="./resources/images/linkedin.png" alt="LinkedIn">
-                    </a>
-		</div>
-                
-                <div class='resumeLogo'>
-		    <a href="./resources/resume.pdf">
-                        <img src="./resources/images/resume2.png" alt="Resume">
-                    </a>
-                </div>
-            </div>
-	</div>
-	<div class='rightSideSection1'>
-	    <div class='rsSection1I1'>
-	        <img src="./resources/images/profile.jpg" alt="Image of Me">
-	    </div>
         </div>
+      </div>
+
+      <div class='experienceHolder'>
+        <div class='MSUCoElogo'>
+          <img src="./resources/images/daydream.png" alt="DayDream">
+        </div>
+        <div class="experienceText">
+          <p class='experience3Title'>Firmware Engineering Intern</p>
+          <div class="experience1Body">
+            Throughout Fall 2024 and Spring 2025, I had the opportunity to work with DayDream, a Midwest technology startup focused on the development of XR hardware devices. I worked as part of a mixed hardware/software team, focusing on embedded systems development. Core duties included:
+            <ul class="experience1Dets">
+              <li>Implementing firmware in C++ to interface the ESP32-S2 SoC with rotary encoders via GPIOs and with the BMI270 IMU via I2C</li>
+              <li>Leveraging FreeRTOS to manage 6 concurrent tasks across 2 cores, optimizing resource utilization and ensuring reliable system performance</li>
+              <li>Designing schematics and PCB layouts for a smart AR device using Altium Designer, with a focus on power and communication circuits</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class='experienceHolder'>
+        <div class='MSUCoElogo'>
+          <a href="https://kpit.com">
+            <img src="./resources/images/kpit.png" alt="KPIT">
+          </a>
+        </div>
+        <div class="experienceText">
+          <p class='experience2Title'>Software Development Intern (Middleware)</p>
+          <div class="experience1Body">
+            During the summer of 2024, I worked at KPIT, an automotive software development company, as part of their middleware team. This team focuses on developing services and tools that allow applications running on electronic control units (ECUs) to access and interact with low-level operating system services. Key responsibilities included:
+            <ul class="experience1Dets">
+              <li>Building a formatting tool with Python to assist with implementing MISRA C guidelines for generated C scripts, identifying over 90% of compliance violations and reducing manual review time</li>
+              <li>Automating generation of Lauterbach PRACTICE test scripts using Excel and Python, lowering the technical barrier and accelerating script development</li>
+              <li>Preparing project documentation and weekly presentations to keep stakeholders informed and gather feedback</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class='experienceHolder'>
+        <div class='MSUCoElogo'>
+          <a href="https://egr.msu.edu/~csk">
+            <img src="./resources/images/CoE.png" alt="CoE">
+          </a>
+        </div>
+        <div class='experienceText'>
+          <p class='experience1Title'>Professorial Assistant</p>
+          <div class='experience1Body'>
+            Worked as a professorial assistant within the Physical Ultrasonics, Microscopy, and Acoustics Lab (PUMA), contributing to material characterization projects aimed at measuring the physical properties of materials and identifying defects. Key responsibilities included:
+            <ul class='experience1Dets'>
+              <li>Employing data augmentation and preprocessing techniques to enhance the diversity of time-series datasets using MATLAB</li>
+              <li>Utilizing Python to implement algorithms to compute and visualize material properties from ultrasonic signals, achieving results within 5% of accepted values</li>
+              <li>Building a preprocessing pipeline to clean and format raw ultrasonic data and prepare it for machine learning applications</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
     </div>
-    <div class="Spacer2">&nbsp;&nbsp;</div>
+  </div>
 
-    <!--Second section ("Experience")-->
-    <div class='secondSection' id='Experience'>
-        <h1 class='title'>Experiences</h1>
-        <div class='allEHolder'>
-	    <div class='experienceHolder'>
-	      <div class='MSUCoElogo'>
-		<a href="https://www.egr.msu.edu/hatlab/">
-		  <img src="./resources/images/hatlab.png" alt="MSU HATlab">
-		</a>
-	      </div>
-	      <div class="experienceText">
-	        <p class='experience4Title'>Undergraduate Research Assistant</p>
-		<div class="experience1Body">
-		  Since Spring 2025, I have workes as an undergraduate research assistant at MSU's Human Augmentation Technologies lab, contibuting to projects at the intersection of machine learning and embeddes systems for human-centred applications. My key responsibilities have included:
-		  <ul class="experience1Dets">
-	            <li>Deploying and benchmarking image recognition models on the NVIDIA Jetson AGX Orin, evaluating how hardware limitations impact real-time inference performance</li>
-		    <li>Designing and implementing a modular image augmentation pipeline in C++ for efficient data preprocessing, supporting geometric transformations, color adjustments, and noise injection</li>
+  <!--Third section ("Projects")-->
+  <div class="thirdSection" id="Projects">
+    <h1 class='title'>Projects</h1>
+    <div class='projectRow'>
 
-		    <li>Fine-tuning generative image models to produce high-fidelity synthetic datasets, enhancing model generalization in downstream tasks.</li>
-		  </ul>
-                </div>		
-	      </div>
-	    </div>
-            <div class='experienceHolder'>
-              <div class='MSUCoElogo'>
-                <img src="./resources/images/daydream.png" alt="DayDream">
-              </div>
-              <div class="experienceText">
-                <p class='experience3Title'>Firmware Engineering Intern</p>
-                <div class=experience1Body>
-                  Throughout Fall 2024 and Spring 2025, I have had the oppotrunity to work with DayDream, a Midwest technology startup with projects relating to the developemnt of XR hardware devices. I worked as part of a mixed hardware/software team, focusing on embedded systems development. As such core duties included:
-                  <ul class="experience1Dets">
-                    <li>Implementing firmware with C++ to interface the ESP32-S2 SoC with rotary encoders through GPIOs and with the BMI270 IMU through I2C</li>
-                    <li>Leveraging FreeRTOS to manage 6 concurrent tasks across 2 cores, optimizing resource utilization and ensuring reliable system performance</li>
-                    <li>Designing schematics and PCB layout for a smart AR device via Altium Designer, focusing on power and communication circuits</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class='experienceHolder'>
-              <div class='MSUCoElogo'>
-                <a href="https://kpit.com">
-                  <img src="./resources/images/kpit.png" alt="KPIT">
-                </a>
-              </div>
-              <div class="experienceText">
-                <p class='experience2Title'>Software Development Intern (Middleware)</p>
-                <div class=experience1Body>
-                Over the course of the summer of 2024, I had the opportunity to work at KPIT, an automotive software development company, as part of their middleware team. This team focuses on developing services and tools that allow applications running on electronic control units (ECUs) to access and interact with low-level operating system services. Key responsibilities included: 
-                  <ul class="experience1Dets">
-                    <li>Building a formatting tool with Python to help with implementation of MISRA C guidelines for generated C scripts, identifying over 90% of compliance violations and reducing manual review time</li>
-                    <li>Automating generation of Lauterbach PRACTICE test scripts through Excel and Python, lowering prerequisite technical barrier and accelerating script development</li>
-                    <li>Preparing project documentation and weekly presentations to keep key stakeholders apprised of progress and obtain feedback</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class='experienceHolder'>
-               <div class='MSUCoElogo'>
-                  <a href="https://egr.msu.edu/~csk">
-                    <img src="./resources/images/CoE.png" alt="CoE">
-                  </a>
-               </div>
-               <div class='experienceText'>
-	             <p class='experience1Title'> Professorial Assistant</p>
-                   <div class='experience1Body'>
-                   Worked as a professorial assistant  within the Physical Ultrasonics, Microscopy and Acoustics Lab (PUMA), contributing to material characterization  projects
-                   which aimed to measure physical properties of materials and identify defects. As such, key responsibilities included:
-                   <ul class='experience1Dets'>
-                       <li>Employing data augmentation and preprocessing techniques to enhance diversity of time-series datasets with MATLAB</li>
-                       <li>Utilizing Python to implement algorithms to compute and visualize material properties from signals collected via ultrasonic testing, obtaining results within 5% of accepted values</li>
-                       <li>Building preprocessing pipeline to clean and format raw data from ultrasonic testing and prepare it for machine learning applications.</li>
-                   </ul> 
-                   </div>
-                </div>
-            </div>
+      <div class='projectHolder'>
+        <div class='petqsLogo'>
+          <a href="https://pet-qs-mu.vercel.app/">
+            <img src="./resources/images/petqs.png" alt="PetQs">
+          </a>
         </div>
+        <div class='petqsDescr'>
+          <strong>Pet Cues</strong> is a project aimed at helping first-time pet owners better understand the emotions of their pets:
+          <ul class='petqsDets'>
+            <li>A user uploads a video of their pet to the web app</li>
+            <li>Pose data is extracted from the video, capturing the orientation of various body parts</li>
+            <li>The pose data is passed to a neural network, which classifies it into one of three emotions: happy, sad, or angry</li>
+            <li>The app returns both the predicted emotion and a labeled version of the original video</li>
+          </ul>
+          Click the <b>logo</b> to visit the web app, or click
+          <b><a class="petqsLink" href="https://github.com/MSU-AI/pet-qs/tree/main">here</a></b>
+          to see the codebase powering it.
+        </div>
+      </div>
+
+      <div class='projectHolder'>
+        <div class='augmentoLogo'>
+          <a href="https://github.com/Erzatskaiser/augmento">
+            <img src="./resources/images/augmento.png" alt="augmento">
+          </a>
+        </div>
+        <div class='petqsDescr'>
+          <strong>augmento</strong> is a high-performance, modular image augmentation toolkit built for flexibility and speed. Designed with a multithreaded pipeline and a clean CLI interface, it supports fast transformations for large datasets.
+          <ul class='petqsDets'>
+            <li>A modular augmentation pipeline allows for the composition of complex augmentations in sequence</li>
+            <li>Multithreaded execution using producer-consumer constructs enables fast performance</li>
+            <li>JSON parsing allows for pipeline configuration without writing code</li>
+          </ul>
+          Click the <b>logo</b> to visit the codebase that powers this project.
+        </div>
+      </div>
+
     </div>
-    
+  </div>
 
-    <!--Third section("Projects")-->
-    <div class="thirdSection" id="Projects">
-        <h1 class='title'>Projects</h1>
-        <div class='projectRow'>
-            <!--Start here: Row for 2 projects -->
-            <div class='projectHolder'>
-                <div class='petqsLogo'>
-                    <a href="https://pet-qs-mu.vercel.app/">
-                        <img src="./resources/images/petqs.png" alt="PetQs">
-                    </a>
-                </div>
-                <div class='petqsDescr'>
-			<strong> Pet Cues </strong> is a project which aims to provide first-time pet owners with the ability to better understand the feelings of their furry
-                companions:
-	<ul class='petqsDets'>
-                    <li>A user uploads a video of their pet to the web app</li>
-                    <li>Pose data is extracted from the video, yielding information about the orientation of various body parts</li>
-                    <li>The pose data is passed to a neural network, which classifies it into one of three emotions: happy, sad, and angry</li>
-                    <li>The web app returns to the user both what is thought to be the dog's emotion and the a labelled version of the original video</li>
-                </ul>
-                Click the <b>logo</b> to visit the web app, or click
-                <b><a class="petqsLink" href="https://github.com/MSU-AI/pet-qs/tree/main">here</a></b>
-                to see the codebase powering it.
-                </div>
-            </div>
-            
-            <div class='projectHolder'>
-                <div class='augmentoLogo'>
-                    <a href="https://github.com/Erzatskaiser/augmento">
-                        <img src="./resources/images/augmento.png" alt="augmento">
-                    </a>
-                </div>
-                <div class='petqsDescr'>
-                     <strong>augmento</strong> is a high-performance, modular image augmentation tooolkit built for flexibility and speed. Designed with a multithreaded pipeline and clean CLI interface, it suports fast transformations for large datasets.
-		<ul class='petqsDets'>
-                    <li>A modular augmentation pipeline allows for the composition of complex augmentations in sequence</li>
-                    <li>Multithreaded execution using producer-consumer constructs allows for fast operation</li>
-                    <li>JSON parsing allows for pipeline configuration without writingi code</li>
-                </ul>
-                Click the <b>logo</b> to visit the codebase that powers this project.
-                </div>
-            </div>
+  <!--Last section ("Contact")-->
+  <div class="fourthSection" id="Contact">
+    <div class='emailReach'>
+      Reach out to me
+      <div class='emailAddress'>
+        <a href="mailto:ebutsana@gmail.com">
+          ebutsana@gmail.com
+        </a>
+      </div>
+      <div class='footerIcons'>
+        <div class='githubLogo'>
+          <a href="https://github.com/Erzatskaiser">
+            <img src="./resources/images/github.png" alt="Github">
+          </a>
         </div>
-    </div>
-
-    <!--Last section("Contact")-->
-    <div class="fourthSection" id="Contact">
-        <div class='emailReach'>
-        Reach out to me
-            <div class='emailAddress'>
-                <a href="mailto:ebutsana@gmail.com">
-                    ebutsana@gmail.com
-                </a>
-            </div>
-            <div class='footerIcons'>
-                    <div class='githubLogo'>
-                        <a href="https://github.com/Erzatskaiser">
-                            <img src="./resources/images/github.png" alt="Github">
-                        </a>
-                    </div>
-
-                    <div class='linkedinLogo'>
-                        <a href="https://www.linkedin.com/in/emmanuel-ze-butsana/">
-                            <img src="./resources/images/linkedin.png" alt="LinkedIn">
-                        </a>
-                    </div>
-
-                    <div class='resumeLogo'>
-                        <a href="./resources/resume.pdf">
-                            <img src="./resources/images/resume2.png" alt="Resume">
-                        </a>
-                    </div>
-            </div>
+        <div class='linkedinLogo'>
+          <a href="https://www.linkedin.com/in/emmanuel-ze-butsana/">
+            <img src="./resources/images/linkedin.png" alt="LinkedIn">
+          </a>
         </div>
+        <div class='resumeLogo'>
+          <a href="./resources/resume.pdf">
+            <img src="./resources/images/resume2.png" alt="Resume">
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </body>
 </html>
+

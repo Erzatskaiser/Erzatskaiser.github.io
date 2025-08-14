@@ -272,7 +272,7 @@
     .projectRow{
         display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2em;
+        gap: 3.5em;
 	width: 95%;
 	margin: auto;
     }
@@ -282,7 +282,7 @@
         flex-direction: column;
 	justify-content: space-between;
 	height: 100%;
-	padding: 1em;
+	padding: 0.5em;
 	margin: auto;
 	border-radius: 25px;
 	border-style: dashed;
@@ -319,7 +319,8 @@
 
     .projectHolder:hover{
         color: #1d67f9;
-        box-shadow: 0 0 5px 10px #1d67f9;
+        border-style: solid;
+        box-shadow: 0 0 5px 3px #1d67f9;
     }
 
     .petqsLogo{
@@ -749,7 +750,8 @@
 
     .projectHolder:hover{
         color: #1d67f9;
-        box-shadow: 0 0 5px 10px #1d67f9;
+        border-style: solid;
+        box-shadow: 0 0 5px 3px #1d67f9;
     }
 
     .petqsLogo{

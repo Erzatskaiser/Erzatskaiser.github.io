@@ -272,7 +272,7 @@
     .projectRow{
         display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 1.5em;
+        gap: 2em;
 	width: 95%;
 	margin: auto;
 	margin-bottom: 2.5em;
@@ -719,7 +719,7 @@
     .projectRow{
         display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	gap: 2em;
+	gap: 1.5em;
         width: 95%;
 	margin: auto;
 	margin-bottom: 4em;

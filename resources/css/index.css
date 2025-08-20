@@ -272,9 +272,10 @@
     .projectRow{
         display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 3.5em;
+        gap: 1.5em;
 	width: 95%;
 	margin: auto;
+	margin-bottom: 2.5em;
     }
 
     .projectHolder{
@@ -328,6 +329,21 @@
         width: 90%;
         height: auto;
         margin: auto;
+    }
+
+    .augmentoLogo{
+      width: 90%;
+      margin: auto;
+    }
+
+    .powerShadelogo{
+      width: 90%;
+      margin: auto;
+    }
+
+    .octopathLogo{
+      width: 60%;
+      margin: auto;
     }
 
     .starxLogo{
@@ -703,9 +719,10 @@
     .projectRow{
         display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	gap: 2em;
+	gap: 1.5em;
         width: 95%;
 	margin: auto;
+	margin-bottom: 4em;
     }
 
     .projectHolder{
@@ -761,9 +778,24 @@
         margin: auto;
     }
 
+    .octopathLogo {
+      width: 60%;
+      margin: auto;
+    }
+
+    .augmentoLogo {
+      width: 90%;
+      margin: auto;
+    }
+
     .starxLogo{
         width: 30%;
         height: auto;
+    }
+
+    .powerShadelogo{
+      width: 100%;
+      margin: auto;
     }
 
     .lsSection1LH{

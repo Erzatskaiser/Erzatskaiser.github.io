@@ -1,245 +1,563 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="./resources/css/index.css" type="text/css" rel="stylesheet">
-  <link rel="icon" type="image/x-icon" href="./resources/images/favicon.png">
   <title>Emmanuel Butsana</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap');
+
+    /* Global Resets & Theme */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: "Inter", sans-serif;
+        background-color: #0a0a0a;
+        color: #e5e5e5;
+        line-height: 1.6;
+        overflow-x: hidden;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    a {
+        color: #1d67f9;
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+
+    a:hover {
+        color: #5c93ff;
+    }
+
+    /* Navigation Bar */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 2rem;
+        position: sticky;
+        top: 0;
+        background-color: rgba(10, 10, 10, 0.8);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        z-index: 1000;
+        border-bottom: 1px solid #1a1a1a;
+    }
+
+    .nav-brand {
+        font-weight: 800;
+        font-size: 1.3rem;
+        color: #ffffff;
+        letter-spacing: -0.05em;
+    }
+
+    .menuOptions {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .menuOptions a {
+        color: #a3a3a3;
+        font-weight: 400;
+        font-size: 0.9rem;
+    }
+
+    .menuOptions a:hover {
+        color: #ffffff;
+    }
+
+    /* Main Container Rules */
+    .section-container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 5rem 1.5rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        font-weight: 800;
+        color: #ffffff;
+        margin-bottom: 3rem;
+        letter-spacing: -0.03em;
+    }
+
+    /* Card Architecture */
+    .card {
+        background-color: #121212;
+        border: 1px solid #1a1a1a;
+        border-radius: 16px;
+        padding: 2.5rem;
+        transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.25s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-4px);
+        border-color: #262626;
+    }
+
+    /* Hero / About Section */
+    .hero-section {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 4rem 1.5rem 6rem 1.5rem;
+        gap: 3rem;
+    }
+
+    .hero-text {
+        flex: 1;
+    }
+
+    .hero-greeting {
+        color: #a3a3a3;
+        font-size: 1.1rem;
+        font-weight: 400;
+    }
+
+    .hero-name {
+        font-size: 3rem;
+        font-weight: 800;
+        color: #ffffff;
+        line-height: 1.15;
+        margin: 0.5rem 0 1.25rem 0;
+        letter-spacing: -0.04em;
+    }
+
+    .hero-tagline {
+        font-size: 1.25rem;
+        color: #e5e5e5;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+    }
+
+    .hero-subtag {
+        color: #737373;
+        font-size: 1.05rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .social-links {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    .social-links img {
+        width: 28px;
+        height: 28px;
+        opacity: 0.6;
+        filter: invert(0.8) brightness(1.2);
+        transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    .social-links img:hover {
+        opacity: 1;
+        transform: translateY(-2px);
+    }
+
+    .hero-image img {
+        width: 240px;
+        height: 240px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 1px solid #262626;
+    }
+
+    /* Experience Specifics */
+    .experience-list {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .experience-card {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .card-logo {
+        width: 70px;
+        height: auto;
+        flex-shrink: 0;
+    }
+
+    .card-logo img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .card-content {
+        flex: 1;
+    }
+
+    .card-title {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+        letter-spacing: -0.01em;
+    }
+
+    .card-subtitle {
+        font-size: 0.95rem;
+        color: #737373;
+        margin-bottom: 0.75rem;
+    }
+
+    .card-body {
+        color: #a3a3a3;
+        font-size: 0.95rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .card-details {
+        padding-left: 1.25rem;
+        color: #d4d4d4;
+        font-size: 0.9rem;
+    }
+
+    .card-details li {
+        margin-bottom: 0.75rem;
+    }
+
+    /* Projects Section Layout */
+    .projects-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .project-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    .project-logo-wrapper {
+        height: 80px; 
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .project-logo-wrapper a {
+        display: inline-block;
+        max-height: 100%;
+    }
+
+    .project-logo-wrapper img {
+        max-height: 80px;
+        width: auto;
+        object-fit: contain;
+    }
+
+    .project-card h3 {
+        color: #ffffff;
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        letter-spacing: -0.01em;
+    }
+
+    .project-card p {
+        color: #a3a3a3;
+        font-size: 0.95rem;
+        margin-bottom: 2rem;
+        flex-grow: 1;
+    }
+
+    .project-link {
+        font-size: 0.9rem;
+        font-weight: 600;
+        display: inline-block;
+        margin-top: auto;
+    }
+
+    /* Accent color tags */
+    .text-green { color: #4ade80; }
+    .text-white { color: #ffffff; }
+    .text-lime { color: #a3e635; }
+    .text-darkgreen { color: #22c55e; }
+    .text-cyan { color: #22d3ee; }
+
+    /* Contact Block & Clean Footer */
+    .footer-section {
+        background-color: #0d0d0d;
+        border-top: 1px solid #1a1a1a;
+        padding: 6rem 1.5rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .footer-section p {
+        color: #737373;
+        font-size: 1rem;
+    }
+
+    .email-cta {
+        font-size: 2rem;
+        font-weight: 800;
+        color: #ffffff;
+        letter-spacing: -0.04em;
+        margin-bottom: 1rem;
+    }
+
+    .email-cta:hover {
+        color: #1d67f9;
+    }
+
+    .footer-socials img {
+        width: 32px;
+        height: 32px;
+        opacity: 0.75;
+    }
+
+    .footer-socials img:hover {
+        opacity: 1;
+    }
+
+    /* Tablet and Desktop Screens */
+    @media screen and (min-width: 768px) {
+        .hero-section {
+            flex-direction: row;
+            padding: 8rem 2rem;
+        }
+        
+        .hero-name {
+            font-size: 4.5rem;
+        }
+        
+        .hero-image img {
+            width: 300px;
+            height: 300px;
+        }
+
+        .experience-card {
+            flex-direction: row;
+            gap: 2.5rem;
+        }
+
+        .projects-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+  </style>
 </head>
 <body>
-  <div class='navbar'>
-    <h1 class='title'>Emmanuel Butsana</h1>
-    <div class='menuOptions'>
-      <a href='#About'>About</a>
-      <p class='menuSpace'> | </p>
-      <a href='#Experience'>Experience</a>
-      <p class='menuSpace'> | </p>
-      <a href='#Projects'>Projects</a>
-      <p class='menuSpace'> | </p>
-      <a href='#Contact'>Contact</a>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="#" class="nav-brand">EB</a>
+    <div class="menuOptions">
+      <a href="#About">About</a>
+      <a href="#Experience">Experience</a>
+      <a href="#Projects">Projects</a>
+      <a href="#Contact">Contact</a>
     </div>
-  </div>
+  </nav>
 
-  <!--First section ("About")-->
-  <div class='firstSection' id='About'>
-    <div class='leftSideSection1'>
-      <p class='lsSection1T1'>Hello, I'm</p>
-      <p class='lsSection1T1'>Emmanuel Butsana</p>
-      <div class='Spacer1'></div>
-      <p class='lsSection1T2'>Honors Electrical and Computer Engineering</p>
-      <p class='lsSection1T2'>@ Michigan State University</p>
-      <div class='lsSection1LH'>
-        <div class='githubLogo'>
-          <a href="https://github.com/Erzatskaiser">
-            <img src="./resources/images/github.png" alt="Github">
-          </a>
-        </div>
-        <div class='linkedinLogo'>
-          <a href="https://www.linkedin.com/in/emmanuel-ze-butsana/">
-            <img src="./resources/images/linkedin.png" alt="LinkedIn">
-          </a>
-        </div>
-        <div class='resumeLogo'>
-          <a href="./resources/resume.pdf">
-            <img src="./resources/images/resume2.png" alt="Resume">
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class='rightSideSection1'>
-      <div class='rsSection1I1'>
-        <img src="./resources/images/profile.jpg" alt="Image of Me">
-      </div>
-    </div>
-  </div>
-  <div class="Spacer2">&nbsp;&nbsp;</div>
-
-  <!--Second section ("Experience")-->
-  <div class='secondSection' id='Experience'>
-    <h1 class='title'>Experiences</h1>
-    <div class='allEHolder'>
-
-      <div class='experienceHolder'>
-        <div class='MSUCoElogo'>
-          <a href="https://www.egr.msu.edu/hatlab/">
-            <img src="./resources/images/hatlab.png" alt="MSU I-EML">
-          </a>
-        </div>
-        <div class="experienceText">
-          <p class='experience4Title'>Undergraduate Research Assistant</p>
-          <div class="experience1Body">
-            Since Spring 2025, I have worked as an undergraduate research assistant at MSU's Intelligent Edge Microsystems Lab (I-EML), contributing to projects at the intersection of machine learning and embedded systems for human-centered applications. My key responsibilities have included:
-            <ul class="experience1Dets">
-              <li>Deploying and benchmarking image recognition models on the NVIDIA Jetson AGX Orin, evaluating how hardware limitations impact real-time inference performance</li>
-              <li>Designing and implementing a modular image augmentation pipeline in C++ for efficient data preprocessing, supporting geometric transformations, color adjustments, and noise injection</li>
-              <li>Fine-tuning generative image models to produce high-fidelity synthetic datasets, enhancing model generalization in downstream tasks</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class='experienceHolder'>
-        <div class='MSUCoElogo'>
-          <img src="./resources/images/daydream.png" alt="DayDream">
-        </div>
-        <div class="experienceText">
-          <p class='experience3Title'>Firmware Engineering Intern</p>
-          <div class="experience1Body">
-            Throughout Fall 2024 and Spring 2025, I had the opportunity to work with DayDream, a Midwest technology startup focused on the development of XR hardware devices. I worked as part of a mixed hardware/software team, focusing on embedded systems development. Core duties included:
-            <ul class="experience1Dets">
-              <li>Implementing firmware in C++ to interface the ESP32-S2 SoC with rotary encoders via GPIOs and with the BMI270 IMU via I2C</li>
-              <li>Leveraging FreeRTOS to manage 6 concurrent tasks across 2 cores, optimizing resource utilization and ensuring reliable system performance</li>
-              <li>Designing schematics and PCB layouts for a smart AR device using Altium Designer, with a focus on power and communication circuits</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class='experienceHolder'>
-        <div class='MSUCoElogo'>
-          <a href="https://kpit.com">
-            <img src="./resources/images/kpit.png" alt="KPIT">
-          </a>
-        </div>
-        <div class="experienceText">
-          <p class='experience2Title'>Software Development Intern (Middleware)</p>
-          <div class="experience1Body">
-            During the summer of 2024, I worked at KPIT, an automotive software development company, as part of their middleware team. This team focuses on developing services and tools that allow applications running on electronic control units (ECUs) to access and interact with low-level operating system services. Key responsibilities included:
-            <ul class="experience1Dets">
-              <li>Building a formatting tool with Python to assist with implementing MISRA C guidelines for generated C scripts, identifying over 90% of compliance violations and reducing manual review time</li>
-              <li>Automating generation of Lauterbach PRACTICE test scripts using Excel and Python, lowering the technical barrier and accelerating script development</li>
-              <li>Preparing project documentation and weekly presentations to keep stakeholders informed and gather feedback</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class='experienceHolder'>
-        <div class='MSUCoElogo'>
-          <a href="https://egr.msu.edu/~csk">
-            <img src="./resources/images/CoE.png" alt="CoE">
-          </a>
-        </div>
-        <div class='experienceText'>
-          <p class='experience1Title'>Professorial Assistant</p>
-          <div class='experience1Body'>
-            Worked as a professorial assistant within the Physical Ultrasonics, Microscopy, and Acoustics Lab (PUMA), contributing to material characterization projects aimed at measuring the physical properties of materials and identifying defects. Key responsibilities included:
-            <ul class='experience1Dets'>
-              <li>Employing data augmentation and preprocessing techniques to enhance the diversity of time-series datasets using MATLAB</li>
-              <li>Utilizing Python to implement algorithms to compute and visualize material properties from ultrasonic signals, achieving results within 5% of accepted values</li>
-              <li>Building a preprocessing pipeline to clean and format raw ultrasonic data and prepare it for machine learning applications</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!--Third section ("Projects")-->
-  <div class="thirdSection" id="Projects">
-    <h1 class='title'>Projects</h1>
-    <div class='projectRow'>
-
-      <div class='projectHolder'>
-        <div class='petqsLogo'>
-          <a href="https://pet-qs-mu.vercel.app/">
-            <img src="./resources/images/petqs.png" alt="PetQs">
-          </a>
-        </div>
-        <div class='petqsDescr'>
-          <strong>Pet Cues</strong> is a project aimed at helping first-time pet owners better understand the emotions of their pets:
-          <ul class='petqsDets'>
-            <li>A user uploads a video of their pet to the web app</li>
-            <li>Pose data is extracted from the video, capturing the orientation of various body parts</li>
-            <li>The pose data is passed to a neural network, which classifies it into one of three emotions: happy, sad, or angry</li>
-            <li>The app returns both the predicted emotion and a labeled version of the original video</li>
-          </ul>
-          Click the <b>logo</b> to visit the web app, or click
-          <b><a class="petqsLink" href="https://github.com/MSU-AI/pet-qs/tree/main">here</a></b>
-          to see the codebase powering it.
-        </div>
-      </div>
-
-      <div class='projectHolder'>
-        <div class='augmentoLogo'>
-          <a href="https://github.com/Erzatskaiser/augmento">
-            <img src="./resources/images/augmento.png" alt="augmento">
-          </a>
-        </div>
-        <div class='petqsDescr'>
-          <strong>augmento</strong> is a high-performance, modular image augmentation toolkit built for flexibility and speed. Designed with a multithreaded pipeline and a clean CLI interface, it supports fast transformations for large datasets.
-          <ul class='petqsDets'>
-            <li>A modular augmentation pipeline allows for the composition of complex augmentations in sequence</li>
-            <li>Multithreaded execution using producer-consumer constructs enables fast performance</li>
-            <li>JSON parsing allows for pipeline configuration without writing code</li>
-          </ul>
-          Click the <b>logo</b> to visit the codebase that powers this project.
-        </div>
-      </div>
-    </div>
-    <div class="projectRow">
-      <div class="projectHolder">
-        <div class="octopathLogo">
-	  <a href="./resources/vlsi_project.pdf">
-	    <img src="./resources/images/octapath.png" alt="octapath">
-	  </a>
-	</div>
-        <div class="petqsDescr">
-	  <strong>octapath</strong> is an 8-bit microprocessor datapath, developed using CMOS technology and the Cadence VLSI design suite. The design followed a hierarchical, bottom-up approach. Key components include:
-	  <ul class="petqsDets">
-	    <li> A register file made using an 8 by 8 SRAM array, with two read ports and one read port enabling simultaneous dual-operand ALU operations in a single read cycle</li>
-	    <li> An ALU featuring a Manchester carry look-ahead adder and supporting a variety of arithmetic and logic operations, all controlling by a 3-bit encoded control scheme.</li>
-	    <li> A logarithmic barrel shifter that performs logical shifts and rotations in both directions</li>
-	  </ul>
-	  Click the <b>logo</b> to read more on this project and its design.
-	</div>
-      </div>
-      <div class="projectHolder">
-        <div class="powerShadelogo">
-          <img src="./resources/images/powershade.png" alt="powershade">
-	</div>
-	<div class="petqsDescr">
-          <strong> PowerShade </strong> is a portable, solar-powered umbrella designed to harness solar energy and allow users to charge their personal electronic devices. It is a project currently under development, with focus on physical design and implementation. Key aims for the project are
-	<ul class="petqsDets">
-          <li> High-power output to support a variety of devices, including phone and spreakers</li>
-	  <li> Flexible solar integration to ensure solar cells are seamlessly integrated into the umbrella's material </li>
-	  <li> Modular and customizable design to facilitate upgrades and modifications </li>
-	</ul>
-	</div>
-      </div>
-    </div>
-  </div>
-
-  <!--Last section ("Contact")-->
-  <div class="fourthSection" id="Contact">
-    <div class='emailReach'>
-      Reach out to me
-      <div class='emailAddress'>
-        <a href="mailto:ebutsana@gmail.com">
-          ebutsana@gmail.com
+  <!-- Hero Section -->
+  <section class="hero-section" id="About">
+    <div class="hero-text">
+      <p class="hero-greeting">Hello, I'm</p>
+      <h1 class="hero-name">Emmanuel Butsana</h1>
+      <p class="hero-tagline">Ph.D. Student in Electrical and Computer Engineering</p>
+      <p class="hero-subtag">University Distinguished Fellow @ Michigan State University</p>
+      
+      <div class="social-links">
+        <a href="https://github.com/Erzatskaiser" target="_blank" aria-label="Github">
+          <img src="./resources/images/github.png" alt="Github">
+        </a>
+        <a href="https://www.linkedin.com/in/emmanuel-ze-butsana/" target="_blank" aria-label="LinkedIn">
+          <img src="./resources/images/linkedin.png" alt="LinkedIn">
+        </a>
+        <a href="./resources/resume.pdf" target="_blank" aria-label="Resume">
+          <img src="./resources/images/resume2.png" alt="Resume">
         </a>
       </div>
-      <div class='footerIcons'>
-        <div class='githubLogo'>
-          <a href="https://github.com/Erzatskaiser">
-            <img src="./resources/images/github.png" alt="Github">
-          </a>
+    </div>
+    <div class="hero-image">
+      <img src="./resources/images/profile.jpg" alt="Emmanuel Butsana">
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="section-container" id="Experience">
+    <h2 class="section-title">Experience</h2>
+    <div class="experience-list">
+
+      <div class="card experience-card">
+        <div class="card-logo">
+          <a href="https://www.egr.msu.edu/hatlab/"><img src="./resources/images/hatlab.png" alt="MSU I-EML"></a>
         </div>
-        <div class='linkedinLogo'>
-          <a href="https://www.linkedin.com/in/emmanuel-ze-butsana/">
-            <img src="./resources/images/linkedin.png" alt="LinkedIn">
-          </a>
-        </div>
-        <div class='resumeLogo'>
-          <a href="./resources/resume.pdf">
-            <img src="./resources/images/resume2.png" alt="Resume">
-          </a>
+        <div class="card-content">
+          <h3 class="card-title text-green">Graduate Research Assistant</h3>
+          <div class="card-subtitle">Intelligent Edge Microsystems Lab (I-EML) &bull; June 2025 – Present</div>
+          <div class="card-subtitle" style="margin-top: -0.5rem; color: #737373; font-size: 0.85rem;">
+            Previously Undergraduate Research Assistant &bull; Jan 2025 – May 2026
+          </div>
+          <p class="card-body">Conducting research at the intersection of machine learning and hardware architecture optimization to implement low-cost alternatives to deep physical tracking layouts.</p>
+          <ul class="card-details">
+            <li>Devised a dual-branch CNN architecture fusing visual features with explicit geometric metadata to achieve a 1.46% MAPE, serving as first author for the subsequent IEEE manuscript</li>
+            <li>Optimized deep learning inference architectures on the NVIDIA Jetson AGX Orin utilizing TensorRT to implement network pruning and INT8 quantization under tight memory and power bounds</li>
+            <li>Constructed a high-performance C++ data augmentation engine leveraging multithreading to saturate CPU throughput, establishing a 2.3x processing speedup over standard Python implementations</li>
+            <li>Implemented a generative AI pipeline utilizing Stable Diffusion 3 to synthesize highly accurate training data, eliminating class imbalance and lowering physical collection overhead</li>
+          </ul>
         </div>
       </div>
+
+      <div class="card experience-card">
+        <div class="card-logo">
+          <img src="./resources/images/daydream.png" alt="DayDream">
+        </div>
+        <div class="card-content">
+          <h3 class="card-title text-white">Firmware Engineering Intern</h3>
+          <div class="card-subtitle">DayDream Inc. &bull; August 2024 – July 2025</div>
+          <p class="card-body">Engineered embedded low-level acquisition logic and multi-core resource tracking mechanisms for next-generation XR device electronics hardware layers.</p>
+          <ul class="card-details">
+            <li>Developed a low-latency sensor acquisition layer in C for the ESP32-S2, writing custom I²C drivers to interface with a BMI270 IMU and rotary encoders via high-priority hardware interrupts</li>
+            <li>Designed a preemptive multitasking architecture using FreeRTOS, utilizing binary semaphores and mutexes to synchronize 6 concurrent tasks across dual Xtensa LX7 cores without race conditions</li>
+            <li>Integrated a custom BLE GATT profile to stream high-throughput sensor telemetry to mobile clients, optimizing payload sizes and connection intervals to maximize bandwidth</li>
+            <li>Captured mixed-signal schematics for an AR wearable device in Altium Designer, integrating switching regulators, LDOs, and noise-sensitive sensor interfaces</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card experience-card">
+        <div class="card-logo">
+          <a href="https://kpit.com"><img src="./resources/images/kpit.png" alt="KPIT"></a>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title text-lime">Software Development Intern (Middleware)</h3>
+          <div class="card-subtitle">KPIT &bull; Summer 2024</div>
+          <p class="card-body">Developed validation tooling and internal scripts to streamline software deployment layers inside automotive electronic control units (ECUs).</p>
+          <ul class="card-details">
+            <li>Building a formatting tool with Python to assist with implementing MISRA C guidelines for generated C scripts, identifying over 90% of compliance violations and reducing manual review time</li>
+            <li>Automating generation of Lauterbach PRACTICE test scripts using Excel and Python, lowering the technical barrier and accelerating script development</li>
+            <li>Preparing project documentation and weekly presentations to keep stakeholders informed and gather feedback</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card experience-card">
+        <div class="card-logo">
+          <a href="https://egr.msu.edu/~csk"><img src="./resources/images/CoE.png" alt="CoE"></a>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title text-darkgreen">Professorial Assistant</h3>
+          <div class="card-subtitle">Physical Ultrasonics, Microscopy, and Acoustics Lab (PUMA)</div>
+          <p class="card-body">Contributed to material characterization research pipelines aiming to systematically capture defect layout limits using digital ultrasonic parsing math.</p>
+          <ul class="card-details">
+            <li>Employing data augmentation and preprocessing techniques to enhance the diversity of time-series datasets using MATLAB</li>
+            <li>Utilizing Python to implement algorithms to compute and visualize material properties from ultrasonic signals, achieving results within 5% of accepted values</li>
+            <li>Building a preprocessing pipeline to clean and format raw ultrasonic data and prepare it for machine learning applications</li>
+          </ul>
+        </div>
+      </div>
+
     </div>
-  </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="section-container" id="Projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-grid">
+
+      <!-- CMOS Op-Amp Project -->
+      <div class="card project-card">
+        <div>
+          <div class="project-logo-wrapper">
+            <a href="./resources/analog_project.pdf">
+              <span style="font-weight:800; font-size:1.5rem; color:#22d3ee; letter-spacing:-0.05em;">Op-Amp</span>
+            </a>
+          </div>
+          <h3 class="text-cyan">Two-Stage Miller CMOS Op-Amp</h3>
+          <p>Designed and verified a two-stage operational amplifier using SkyWater 130nm node technology inside Cadence Virtuoso. Modeled frequency compensation networks to ensure full stability, solid signal integrity, and robust noise immunity across the operating spectrum.</p>
+        </div>
+        <a class="project-link" href="./resources/analog_project.pdf">Read Technical Report &rarr;</a>
+      </div>
+
+      <!-- Octapath Project -->
+      <div class="card project-card">
+        <div>
+          <div class="project-logo-wrapper">
+            <a href="./resources/vlsi_project.pdf"><img src="./resources/images/octapath.png" alt="octapath"></a>
+          </div>
+          <h3>octapath</h3>
+          <p>An 8-bit microprocessor datapath layout engineered inside a 0.5 µm CMOS process technology node. Fully integrates custom 6T SRAM storage layout configurations, an explicit Manchester carry-lookahead ALU, and logarithmic barrel shifters.</p>
+        </div>
+        <a class="project-link" href="./resources/vlsi_project.pdf">Read Design Sheet &rarr;</a>
+      </div>
+
+      <!-- Augmento Project -->
+      <div class="card project-card">
+        <div>
+          <div class="project-logo-wrapper">
+            <a href="https://github.com/Erzatskaiser/augmento"><img src="./resources/images/augmento.png" alt="augmento"></a>
+          </div>
+          <h3>augmento</h3>
+          <p>A high-performance, modular image augmentation toolkit built with a multithreaded architecture. Implements real-time structural transformation tasks through easy JSON configs.</p>
+        </div>
+        <a class="project-link" href="https://github.com/Erzatskaiser/augmento">View Codebase &rarr;</a>
+      </div>
+
+      <!-- Pet Cues Project -->
+      <div class="card project-card">
+        <div>
+          <div class="project-logo-wrapper">
+            <a href="https://pet-qs-mu.vercel.app/"><img src="./resources/images/petqs.png" alt="PetQs"></a>
+          </div>
+          <h3>Pet Cues</h3>
+          <p>A web application web framework project helping first-time pet owners understand pet emotions by parsing pose layout coordinates mapping to a classification network model architecture.</p>
+        </div>
+        <a class="project-link" href="https://github.com/MSU-AI/pet-qs/tree/main">View Codebase &rarr;</a>
+      </div>
+
+      <!-- PowerShade Project -->
+      <div class="card project-card">
+        <div>
+          <div class="project-logo-wrapper">
+            <a href="https://powershadeumbrellas.com/" target="_blank"><img src="./resources/images/powershade.png" alt="powershade"></a>
+          </div>
+          <h3>PowerShade</h3>
+          <p>A portable solar hardware umbrella setup configured to dynamically gather solar arrays cleanly to support robust high-speed charging modules across smart portable electronics.</p>
+        </div>
+        <a class="project-link" href="https://powershadeumbrellas.com/" target="_blank">Visit Startup Site &rarr;</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact Footer Section -->
+  <footer class="footer-section" id="Contact">
+    <p>Let's build something exceptional together.</p>
+    <a href="mailto:ebutsana@gmail.com" class="email-cta">ebutsana@gmail.com</a>
+    <div class="social-links footer-socials">
+      <a href="https://github.com/Erzatskaiser" target="_blank"><img src="./resources/images/github.png" alt="Github"></a>
+      <a href="https://www.linkedin.com/in/emmanuel-ze-butsana/" target="_blank"><img src="./resources/images/linkedin.png" alt="LinkedIn"></a>
+      <a href="./resources/resume.pdf" target="_blank"><img src="./resources/images/resume2.png" alt="Resume"></a>
+    </div>
+  </footer>
+
 </body>
 </html>
-

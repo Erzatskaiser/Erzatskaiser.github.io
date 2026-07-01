@@ -1,882 +1,312 @@
-/*Mobile view*/
-@media screen and (max-width: 900px){
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
 
-    body {
-        display: flex;
-        flex-direction: column;
-        aligh-items: center;
-        width: 100vw;
-        margin: 0;
-        font-size: 100%;
-        background-color: #e29806;
-    }
-
-    img {
-        width: 100%;
-        height: auto;
-    }
-
-    .menuOptions {
-        display: none;
-    }
-
-    .menuSpace {
-        font-family: "Inter", sans-serif;
-        font-weight: 100;
-        font-size: 100%;
-        color: white;
-        padding: 1em;
-    }
-
-    .menuOptions a {
-        font-family: "Inter", sans-serif;
-        font-weight: 100;
-        font-size: 200%;
-        text-decoration: none;
-        color: white;
-    }
-
-    .menuOptions a:hover {
-        font-family: "Inter", sans-serif;
-        font-weight: 600;
-        font-size: 200%;
-        text-decoration: none;
-        color: #1d67f9;
-
-    }
-
-    .Spacer1 {
-        padding: 1em;
-    }
-
-    .Spacer2 {
-        margin-top: 2%;
-        height: 10%;
-    }
-
-    .Spacer3 {
-        margin-top: 5%;
-        height: 50%;
-        background-color: #161616;
-    }
-
-    .githubLogo {
-        width: auto;
-    }
-
-    .MSUCoElogo {
-        width: 70%;
-        padding-left: 1.2em;
-        padding-right: 1.2em;
-    }
-
-    .MSUCoElogo img {
-        width: 100%;
-        height: auto;
-    }
-
-    .githubLogo img {
-        width: 60%;
-        height: auto;
-        margin: auto;
-    }
-
-    @keyframes shaking {
-        from {
-            transform: rotate(0turn);
-        }
-
-        to {
-            transform: rotate(1turn);
-        }
-    }
-
-    .githubLogo img:hover {
-        width: 60%;
-        height: auto;
-        margin: auto;
-        animation: shaking 120ms 1 linear;
-    }
-
-    .linkedinLogo {
-        width: auto;
-    }
-
-    .linkedinLogo img {
-        width: 60%;
-        height: auto;
-        margin: auto;
-    }
-
-    .linkedinLogo img:hover{
-        width: 60%;
-        height: auto;
-        margin: auto;
-        animation: shaking 120ms 1 linear;
-    }
-
-    .resumeLogo {
-        width: auto;
-    }
-
-    .resumeLogo img {
-        width: 60%;
-        height: auto;
-        margin: auto;
-    }
-
-    .resumeLogo img:hover{
-        width: 60%;
-        height: auto;
-        margin: auto;
-        animation: shaking 120ms 1 linear;
-    }
-
-    .rsSection1I1 img {
-        width: 120%;
-        max-width: 120%;
-        border-radius: 50%;
-    }
-
-    .rsSection1I1 img:hover{
-        box-shadow: 0 0 5px 10px #f0a105;
-    }
-
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        margin-bottom: 5%;
-        background-color: #e29806;
-    }
-
-    .firstSection{
-        display: flex;
-        flex-direction: column;
-        background-color: #e29806;
-        margin: auto;
-        width: 100%;
-    }
-
-    .secondSection{
-        display: flex;
-        flex-direction: column;
-        background-color: #161616;
-        margin: auto;
-        padding-bottom: 3em;
-        width: 100%;
-    }
-
-    .thirdSection{
-        display: flex;
-        flex-direction: column;
-        background-color: #161616;
-        padding-bottom: 3em;
-    }
-
-    .fourthSection{
-        display:flex;
-        align-items:center;
-        flex-direction: column;
-        background-color: #e29806;
-        padding-top: 1em;
-        padding-bottom:1em;
-        text-align: center;
-    }
-
-    .allEHolder {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .experienceHolder{
-        display: flex;
-        border-radius: 25px;
-        flex-direction: column;
-        align-items: center;
-        color: white;
-        width: 75%;
-        border-style: solid;
-        border-width: 5px;
-        border-color: #3b3b3b;
-        padding: 1.5em;
-        margin-bottom: 2em;
-    }
-
-    .experienceHolder:hover{
-        color: #0a0a0a;
-        border-style: solid;
-        box-shadow: 0 0 5px 10px #0a0a0a;
-    }
-
-    .experience1Title{
-        font-family: "Inter", sans-serif;
-        padding-bottom: 0.5em;
-        font-weight: 800;
-        font-size: 160%;
-        color: #034c33;
-        margin: auto;
-    }
-
-    .experience2Title{
-      font-family: "Inter", sans-serif;
-      padding-bottom: 0.5em;
-      font-weight: 800;
-      font-size: 160%;
-      color: #AEFE44;
-      margin: auto;
-    }
-
-    .experience3Title{
-      font-family: "Inter", sans-serif;
-      padding-bottom: 0.5em;
-      font-weight: 800;
-      font-size: 160%;
-      color: white;
-      margin: auto;
-    }
-
-    .experience4Title{
-      font-family: "Inter", sans-serif;
-      padding-bottom: 0.5em;
-      font-weight: 800;
-      font-size: 160%;
-      color: #197427;
-      margin: auto;
-    }
-
-    .experience1Body{
-        font-family: "Inter", sans-serif;
-        font-weight: 100;
-        font-size: 130%;
-        color: white;
-        width: 95%;
-        margin: auto;
-    }
-
-    .experienceText{
-        display: flex;
-        width:90%;
-        flex-direction: column;
-        align-items: end;
-    }
-
-    .experience1Dets li{
-        margin-bottom: 1em;
-        font-size: 70%;
-    }
-
-    .projectRow{
-        display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2em;
-	width: 95%;
-	margin: auto;
-	margin-bottom: 2.5em;
-    }
-
-    .projectHolder{
-        display: flex;
-        flex-direction: column;
-	justify-content: space-between;
-	height: 100%;
-	padding: 0.5em;
-	margin: auto;
-	border-radius: 25px;
-	border-style: dashed;
-        font-family: "Inter", sans-serif;
-        color: #e29806;
-        text-align: center;
-    }
-
-    .petqsLink{
-        color: white;
-        text-decoration: none;
-    }
-
-    .petqsDets li{
-        padding: 0.3em;
-    }
-
-    .petqsDets{
-        display: none;
-        flex-direction: column;
-        text-align: start;
-    }
-
-    .petqsDescr{
-        font: "Inter", sans-serif;
-        font-weight: 100;
-        font-size: 90%;
-        color: white;
-        margin-top: 1em;
-        margin-bottom: 1em;
-        margin-left: 1em;
-        margin-right: 1em;
-    }
-
-    .projectHolder:hover{
-        color: #1d67f9;
-        border-style: solid;
-        box-shadow: 0 0 5px 3px #1d67f9;
-    }
-
-    .petqsLogo{
-        padding: 1em;
-        width: 90%;
-        height: auto;
-        margin: auto;
-    }
-
-    .augmentoLogo{
-      width: 90%;
-      margin: auto;
-    }
-
-    .powerShadelogo{
-      width: 90%;
-      margin: auto;
-    }
-
-    .octopathLogo{
-      width: 60%;
-      margin: auto;
-    }
-
-    .starxLogo{
-        width: 30%;
-        height: auto;
-    }
-
-    .lsSection1LH{
-        display: flex;
-        flex-direction: row;
-        margin-top: 5%;
-        width: 90%;
-        margin-bottom: 1.5em;
-        justify-content: center;
-        align-items: center;
-        padding: 0%;
-    }
-
-    .footerIcons{
-        display: flex;
-        flex-direction: row;
-        margin-top: 0.5em;
-        width: 20%;
-        justify-content: center;
-        align-items: center;
-        padding: 0%;
-    }
-
-    .leftSideSection1{
-        display: flex;
-        flex-direction: column;
-        font-family: "Inter", sans-serif;
-        color: white;
-        width: 90%;
-        align-items: center;
-        text-align: center;
-        margin: auto;
-    }
-
-    .lsSection1T1{
-        font-size: 3em;
-        font-weight: 800;
-        margin: auto;
-        text-align: center;
-    }
-
-    .lsSection1T2{
-        font-size: 2em;
-        font-weight: 100;
-        margin: auto;
-        margin-top: -0.5em;
-        margin-bottom: 0.5em;
-    }
-
-    .rightSideSection1{
-        width: 40%;
-        margin: auto;
-        text-align: center;
-    }
-
-    .emailReach{
-        display: flex;
-        flex-direction:  column;
-        font-family: "Inter", sans-serif;
-        font-weight: 200;
-        font-size: 150%;
-        color: white;
-        background-color: #e29806;
-        border-radius: 25px;
-        margin-top: 0.4em;
-        width: 90%;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .emailAddress{
-        color: #1d67f9;
-        font-size: 70%;
-        font-weight: 700;
-    }
-
-    .emailAddress a{
-        color: #1d67f9;
-        text-decoration: none;
-    }
-
-    .title {
-        font-family: "Inter", sans-serif;
-        font-weight: 200;
-        font-size: 2em;
-        color:white;
-        margin-left: 2%;
-    }
-
+/* Global Resets */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-/*Desktop view*/
-@media screen and (min-width: 900px){
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+html {
+    scroll-behavior: smooth;
+}
 
-    body {
-        display: flex;
-        flex-direction: column;
-        aligh-items: center;
-        width: 100vw;
-        margin: 0;
-        font-size: 100%;
-        background-color: #e29806;
-    }
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #0a0a0a;
+    color: #e5e5e5;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
 
-    img {
-        width: 100%;
-        height: auto;
-    }
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 
-    .menuOptions {
-        display: flex;
-        align-items: center;
-        padding-right: 3em;
-        float: right;
-    }
+a {
+    color: #1d67f9;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
 
-    .menuSpace {
-        font-family: "Inter", sans-serif;
-        font-weight: 100;
-        font-size: 100%;
-        color: white;
-        padding: 1em;
-    }
+a:hover {
+    color: #5c93ff;
+}
 
-    .menuOptions a {
-        font-family: "Inter", sans-serif;
-        font-weight: 100;
-        font-size: 200%;
-        text-decoration: none;
-        color: white;
-    }
+/* Navbar Layout */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    position: sticky;
+    top: 0;
+    background-color: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(12px);
+    z-index: 1000;
+    border-bottom: 1px solid #1a1a1a;
+}
 
-    .menuOptions a:hover {
-        font-family: "Inter", sans-serif;
-        font-weight: 100;
-        font-size: 200%; 
-        text-decoration: none;
-        color: #1d67f9;
+.nav-brand {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
 
-    }
+.menuOptions {
+    display: flex;
+    gap: 1.5rem;
+}
 
-    .Spacer1 {
-        padding: 1em;
-    }
+.menuOptions a {
+    color: #a3a3a3;
+    font-weight: 400;
+    font-size: 0.95rem;
+}
 
-    .Spacer2 {
-        margin-top: 5%;
-        height: 50%;
-    }
+.menuOptions a:hover {
+    color: #ffffff;
+}
 
-    .Spacer3 {
-        margin-top: 5%;
-        height: 50%;
-        background-color: #161616;
-    }
+/* Section Templates */
+.section-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 5rem 1.5rem;
+}
 
-    .githubLogo {
-        width: auto;
-    }
+.section-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 3rem;
+    letter-spacing: -0.025em;
+    position: relative;
+}
 
-    .MSUCoElogo {
-        width: 30%;
-        padding-left: 1.2em;
-        padding-right: 1.2em;
-    }
+/* Cards (Base Structuring) */
+.card {
+    background-color: #121212;
+    border: 1px solid #1a1a1a;
+    border-radius: 12px;
+    padding: 2rem;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
 
-    .MSUCoElogo img {
-        width: 100%;
-        height: auto;
-    }
+.card:hover {
+    transform: translateY(-4px);
+    border-color: #262626;
+}
 
-    .githubLogo img {
-        width: 60%;
-        height: auto;
-        margin: auto;
-    }
+/* Hero Section */
+.hero-section {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 6rem 1.5rem;
+    gap: 3rem;
+}
 
-    @keyframes shaking {
-        from {
-            transform: rotate(0turn);
-        }
+.hero-greeting {
+    color: #a3a3a3;
+    font-size: 1.1rem;
+    font-weight: 300;
+}
 
-        to {
-            transform: rotate(1turn);
-        }
-    }
+.hero-name {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.1;
+    margin: 0.5rem 0 1.5rem 0;
+    letter-spacing: -0.05em;
+}
 
-    .githubLogo img:hover {
-        width: 60%;
-        height: auto;
-        margin: auto;
-        animation: shaking 120ms 1 linear;
-    }
+.hero-tagline {
+    font-size: 1.25rem;
+    color: #e5e5e5;
+    font-weight: 600;
+}
 
-    .linkedinLogo {
-        width: auto;
-    }
+.hero-subtag {
+    color: #737373;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
 
-    .linkedinLogo img {
-        width: 60%;
-        height: auto;
-        margin: auto;
-    }
+.social-links {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+}
 
-    .linkedinLogo img:hover{
-        width: 60%;
-        height: auto;
-        margin: auto;
-        animation: shaking 120ms 1 linear;
-    }
+.social-links img {
+    width: 24px;
+    height: 24px;
+    opacity: 0.6;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
 
-    .resumeLogo {
-        width: auto;
-    }
+.social-links img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
 
-    .resumeLogo img {
-        width: 60%;
-        height: auto;
-        margin: auto;
-    }
+.hero-image img {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #262626;
+}
 
-    .resumeLogo img:hover{
-        width: 60%;
-        height: auto;
-        margin: auto;
-        animation: shaking 120ms 1 linear;
-    }
+/* Experience Subsections */
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
 
-    .rsSection1I1 img {
-        width: 80%;
-        max-width: 100%;
-        border-radius: 50%;
-    }
+.experience-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
 
-    .rsSection1I1 img:hover{
-        margin: auto;
-        box-shadow: 0 0 5px 10px #f0a105;
-    }
+.card-logo {
+    width: 60px;
+    flex-shrink: 0;
+}
 
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        margin-bottom: 5%;
-        background-color: #e29806;
-    }
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
 
-    .firstSection{
-        display: flex;
+.card-body {
+    color: #a3a3a3;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.card-details {
+    padding-left: 1.25rem;
+    color: #d4d4d4;
+    font-size: 0.9rem;
+}
+
+.card-details li {
+    margin-bottom: 0.75rem;
+}
+
+/* Project Layout Grids */
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    height: 100%;
+}
+
+.project-logo-wrapper {
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.project-logo-wrapper img {
+    max-height: 100%;
+    width: auto;
+}
+
+.project-card h3 {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    color: #a3a3a3;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-link {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Color Labels for Minimalist Accents */
+.text-green { color: #4ade80; }
+.text-white { color: #ffffff; }
+.text-lime { color: #a3e635; }
+.text-darkgreen { color: #22c55e; }
+
+/* Contact Section (Footer) */
+.footer-section {
+    background-color: #0d0d0d;
+    border-top: 1px solid #1a1a1a;
+    padding: 6rem 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.footer-section p {
+    color: #737373;
+    font-size: 1.1rem;
+}
+
+.email-cta {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.03em;
+}
+
+.email-cta:hover {
+    color: #1d67f9;
+}
+
+.footer-socials {
+    margin-top: 1rem;
+}
+
+/* Media Queries for Desktop Formatting */
+@media screen and (min-width: 768px) {
+    .hero-section {
         flex-direction: row;
-        background-color: #e29806;
-        margin: auto;
-        width: 100%;
+        padding: 8rem 2rem;
+    }
+    
+    .hero-name {
+        font-size: 4.5rem;
+    }
+    
+    .hero-image img {
+        width: 320px;
+        height: 320px;
     }
 
-    .secondSection{
-        display: flex;
-        flex-direction: column;
-        background-color: #161616;
-        margin: auto;
-        padding-bottom: 5em;
-        width: 100%;
-    }
-
-    .thirdSection{
-        display: flex;
-        flex-direction: column;
-        background-color: #161616;
-        padding-bottom: 3em;
-    }
-
-    .fourthSection{
-        display:flex;
-        align-items:center;
-        flex-direction: column;
-        background-color: #e29806;
-        padding-top: 2em;
-        padding-bottom:2em;
-        text-align: center;
-    }
-
-    .allEHolder {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .experienceHolder{
-        display: flex;
-        border-radius: 25px;
+    .experience-card {
         flex-direction: row;
-        align-items: center;
-        color: white;
-        width: 90%;
-        border-style: solid;
-        border-width: 5px;
-        border-color: #3b3b3b;
-        padding: 1.5em;
-        margin-bottom: 2em;
+        gap: 2.5rem;
     }
 
-    .experienceHolder:hover{
-        color: #0a0a0a;
-        border-style: solid 10px;
-        box-shadow: 0 0 5px 10px #0a0a0a;
-    }
-
-    .experience1Title{
-        font-family: "Inter", sans-serif;
-        padding-bottom: 0.5em;
-        font-weight: 800;
-        font-size: 400%;
-        color: #034c33;
-        margin: auto;
-        padding-left: 2%;
-    }
-
-    .experience2Title{
-      font-family: "Inter", sans-serif;
-      padding-bottom: 0.5em;
-      font-weight: 800;
-      font-size: 400%;
-      color: #AEFE44;
-      margin: auto;
-    }
-
-    .experience3Title{
-      font-family: "Inter", sans-serif;
-      padding-bottom: 0.5em;
-      font-weight: 800;
-      font-size: 400%;
-      color: white;
-      margin: auto;
-    }
-
-    .experience4Title{
-      font-family: "Inter", sans-serif;
-      padding-bottom: 0.5em;
-      font-weight: 800;
-      font-size: 400%;
-      color: #197427;
-      margin: auto;
-    }
-
-    .experience1Body{
-        font-family: "Inter", sans-serif;
-        font-weight: 100;
-        font-size: 150%;
-        color: white;
-        width: 95%;
-        margin: auto;
-    }
-
-    .experienceText{
-        display: flex;
-        width:70%;
-        flex-direction: column;
-        align-items: end;
-    }
-
-    .experience1Dets li{
-        margin-bottom: 1em;
-        font-size: 70%;
-    }
-
-    .projectRow{
-        display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	gap: 1.5em;
-        width: 95%;
-	margin: auto;
-	margin-bottom: 4em;
-    }
-
-    .projectHolder{
-        display: flex;
-        flex-direction: column;
-	justify-content: space-between;
-	height: 100%;
-	padding: 1em;
-	margin: auto;
-	border-radius: 25px;
-	border-style: dashed;
-        font-family: "Inter", sans-serif;
-        color: #e29806;
-        text-align: center;
-    }
-
-    .petqsLink{
-        color: white;
-        text-decoration: none;
-    }
-
-    .petqsDets li{
-        padding: 0.3em;
-    }
-
-    .petqsDets{
-        display: flex;
-        flex-direction: column;
-        text-align: start;
-    }
-
-    .petqsDescr{
-        font: "Inter", sans-serif;
-        font-weight: 100;
-        font-size: 110%;
-        color: white;
-        margin-top: 1em;
-        margin-bottom: 1em;
-        margin-left: 1em;
-        margin-right: 1em;
-    }
-
-    .projectHolder:hover{
-        color: #1d67f9;
-        border-style: solid;
-        box-shadow: 0 0 5px 3px #1d67f9;
-    }
-
-    .petqsLogo{
-        padding: 1em;
-        width: 90%;
-        height: auto;
-        margin: auto;
-    }
-
-    .octopathLogo {
-      width: 60%;
-      margin: auto;
-    }
-
-    .augmentoLogo {
-      width: 90%;
-      margin: auto;
-    }
-
-    .starxLogo{
-        width: 30%;
-        height: auto;
-    }
-
-    .powerShadelogo{
-      width: 100%;
-      margin: auto;
-    }
-
-    .lsSection1LH{
-        display: flex;
-        flex-direction: row;
-        margin-top: 5%;
-        width: 30%;
-        justify-content: center;
-        align-items: center;
-        padding: 0%;
-    }
-
-    .footerIcons{    
-        display: flex;
-        flex-direction: row;
-        margin-top: 0.3em;
-        width: 18%;
-        justify-content: center;
-        align-items: center;
-        padding: 0%;
-    }
-
-    .leftSideSection1{
-        display: flex;
-        flex-direction: column;
-        font-family: "Inter", sans-serif;
-        color: white;
-        width: 60%;
-        align-items: center;
-        text-align: center;
-        margin: auto;
-    }
-
-    .lsSection1T1{
-        font-size: 4.5em;
-        font-weight: 800;
-        margin: auto;
-    }
-
-    .lsSection1T2{
-        font-size: 2em;
-        font-weight: 100;
-        margin: auto;
-    }
-
-    .rightSideSection1{
-        width: 50%;
-        margin: auto;
-        text-align: center;    
-    }
-
-    .emailReach{
-        display: flex;
-        flex-direction:  column;
-        font-family: "Inter", sans-serif;
-        font-weight: 200;
-        font-size: 140%;
-        color: white;
-        background-color: #e29806;
-        border-radius: 25px;
-        margin-top: 0.4em;
-        width: 60%;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .emailAddress{
-        color: #1d67f9;
-        font-weight: 700;
-    }
-
-    .emailAddress a{
-        color: #1d67f9;
-        text-decoration: none;
-    }
-
-    .title {
-        font-family: "Inter", sans-serif;
-        font-weight: 200;
-        font-size: 3em;
-        color:white;
-        margin-left: 1%;
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
